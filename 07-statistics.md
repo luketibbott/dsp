@@ -22,11 +22,11 @@ Complete the following exercises along with the questions in this file. Some can
 
 Communicate the problem, how you solved it, and the solution, within each of the following [markdown](https://guides.github.com/features/mastering-markdown/) files. (You can include code blocks and images within markdown.)
 
-## <a name="section-b"></a>2.  Why We Are Using Think Stats 
+## <a name="section-b"></a>2.  Why We Are Using Think Stats
 
-The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the [ThinkStats repository on GitHub](https://github.com/AllenDowney/ThinkStats2).  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you. 
+The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the [ThinkStats repository on GitHub](https://github.com/AllenDowney/ThinkStats2).  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you.
 
-For example, in the first exercise, the author has already written a function to compute Cohen's D.  **You could import it, or you could write your own code to practice python and develop a deeper understanding of the concept.** 
+For example, in the first exercise, the author has already written a function to compute Cohen's D.  **You could import it, or you could write your own code to practice python and develop a deeper understanding of the concept.**
 
 Think Stats uses a higher degree of python complexity from the python tutorials and introductions to python concepts, and that is intentional to prepare you for the bootcamp.  
 
@@ -34,7 +34,7 @@ Think Stats uses a higher degree of python complexity from the python tutorials 
 
 ---
 
-## <a name="section-c"></a>3.  Instructions for Cloning the Repo 
+## <a name="section-c"></a>3.  Instructions for Cloning the Repo
 Using the [code referenced in the book](https://github.com/AllenDowney/ThinkStats2), follow the step-by-step instructions below.  
 
 **Step 1. Create a directory on your computer where you will do the prework.  Below is an example:**
@@ -76,17 +76,49 @@ This problem presents a robust example of actual vs biased data.  As a data scie
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
-This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
+This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.
 
 
 
-### Q5. Bayesian (Elvis Presley twin) 
+### Q5. Bayesian (Elvis Presley twin)
 
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+We have three random variables that we'll use to solve this problem:
+
+* $F$ fraternal twins
+* $I$ identical twins
+* $T_b$ twin boys
+
+We're given that $P(F) = \frac{1}{125}$ and $P(I) = \frac{1}{300}$.
+
+We need to find $P(T_b)$ before we continue.
+
+We can decompose $P(T_b)$ by invoking the law of total probability like so:
+
+$$P(T_b) = P(F) \cdot P(T_b \mid F) + P(I) \cdot P(T_b \mid I)$$
+
+We know $P(F) = \frac{1}{125}$ and $P(I) = \frac{1}{300}$
+
+$P(T_b \mid F) = 1/4$ because there is a $1/4$ probability that any set of *fraternal* twins is composed of two boys.
+
+$P(T_b \mid I) = 1/2$ because *identical* twins must be the same sex, meaning there is a $1/2$ chance of any set of *identical* twins being composed of two boys.
+
+Thus we have
+
+$$P(T_b) = \frac{1}{125} * \frac{1}{4} + \frac{1}{300}*\frac{1}{2} = .003667$$
+
+Plug everything in to the following equation:
+
+$$P(I \mid T_b) = \frac{P(T_b\mid I) \cdot P(I)}{P(T_b)}$$
+
+to get
+
+$$\frac{\frac{1}{2} * \frac{1}{300}}{.003667} = .454504 = 5/11$$
+
+Thus, there is a $5/11$ probability that Elvis Presley was an identical twin.
 
 ---
 
@@ -117,7 +149,7 @@ In the theoretical world, all data related to an experiment or a scientific prob
 
 Read Allen Downey's [Think Bayes](http://greenteapress.com/thinkbayes/) book.  It is available online for free, or you can buy a paper copy if you would like.
 
-[<img src="img/think_bayes.png" title="Think Bayes"/>](http://greenteapress.com/thinkbayes/) 
+[<img src="img/think_bayes.png" title="Think Bayes"/>](http://greenteapress.com/thinkbayes/)
 
 ---
 
