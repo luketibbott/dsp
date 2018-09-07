@@ -18,7 +18,7 @@ thinkplot.Hist(pmf)
 ```
 
 
-![unbiased](output_11_0.png)
+![alt_text](output_11_0.png)
 
 
 
@@ -28,7 +28,7 @@ thinkplot.Hist(pmf_biased)
 ```
 
 
-![biased](output_12_0.png)
+![alt_text](output_12_0.png)
 
 
 

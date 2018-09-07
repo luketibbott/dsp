@@ -2,6 +2,8 @@
 
 ```python
 import first
+import thinkstats2
+import thinkplot
 
 preg, firsts, others = first.MakeFrames()
 ```

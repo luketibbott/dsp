@@ -3,6 +3,9 @@
 ```python
 import hypothesis
 import first
+import thinkstats2
+import thinkplot
+import nsfg
 ```
 
 

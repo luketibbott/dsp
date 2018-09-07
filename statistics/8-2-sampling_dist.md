@@ -5,6 +5,8 @@ First create our sampling distribution:
 
 ```python
 import math
+import thinkstats2
+import thinkplot
 
 def exp_sampling_distribution(lam=2, n=10, iters=1000):
     '''

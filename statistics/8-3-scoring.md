@@ -4,6 +4,8 @@
 
 ```python
 import estimation
+import thinkstats2
+import thinkplot
 ```
 
 We'll need to plot some horizontal lines to show our 90% confidence interval later. We'll need to define a function for that.
