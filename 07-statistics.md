@@ -125,7 +125,25 @@ Thus, there is a $5/11$ probability that Elvis Presley was an identical twin.
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Bayesians believe in updating their model as they get more data. A Bayesian tasked with making predictions might create a model with all their prior knowledge about the task at hand built in to it. They might train their algorithm based on a set of training data.
+
+As their algorithm makes predictions, it might examine the accuracy of their predictions and make changes based on its accuracy in certain situations.
+
+A frequentist would create a model, likely with all their prior knowledge about the task at hand built in, and then refine that model on train data. They would not, however, update their model after observing the accuracy of its result data.
+
+As an example, suppose a Bayesian and a Frequentist are tasked with predicting the weather.
+
+The Bayesian and Frequentist both create their statistical models based on all the available data about weather in the past.
+
+The Bayesian notices that whenever there's a sunny day, his model tends to predict rain more frequently than is observed. He changes his model to reflect this, believing that his model is flawed, and that this change will make it more accurate in the long run.
+
+The Frequentist notices this same inaccuracy, but does not change her model. She does not believe her model is wrong because she has applied all the known rules to her model, and that this inaccuracy is probably due to a weather anomaly that will eventually revert back to its normal behavior. Her model was built on this "normal behavior" and so it does not need changing.
+
+The Bayesian makes changes as he detects inaccuracies in their model. The Frequentist does not.
+
+The Frequentist believes the probability of an event occuring is the frequency of that event occurring over the course of infinite observations.
+
+The Bayesian believes the probability of an event is contextual and changes depending on the context of your observations.
 
 ---
 
