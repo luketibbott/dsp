@@ -18,11 +18,11 @@ print('Unbiased mean: {} \nBiased mean: {}'.format(pmf.Mean(), pmf_biased.Mean()
 
 Unbiased pmf:
 
-![image](~/documents/metis/dsp/statistics/unbiased_pmf.png)
+![image](unbiased_pmf.png)
 
 Biased pmf:
 
-![image](~/documents/metis/dsp/statistics/biased_pmf.png)
+![image](biased_pmf.png)
 
 Unbiased mean: 1.024205155043831
 Biased mean: 2.403679100664282
