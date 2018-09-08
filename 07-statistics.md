@@ -1,22 +1,3 @@
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 # Statistics
 
 # Table of Contents
@@ -101,43 +82,7 @@ This is a classic example of hypothesis testing using the normal distribution.  
 
 ### Q5. Bayesian (Elvis Presley twin)
 
-Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
-
-Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
-
-We have three random variables that we'll use to solve this problem:
-
-* $F$ fraternal twins
-* $I$ identical twins
-* $T_b$ twin boys
-
-We're given that $P(F) = \frac{1}{125}$ and $P(I) = \frac{1}{300}$.
-
-We need to find $P(T_b)$ before we continue.
-
-We can decompose $P(T_b)$ by invoking the law of total probability like so:
-
-$$P(T_b) = P(F) \cdot P(T_b \mid F) + P(I) \cdot P(T_b \mid I)$$
-
-We know $P(F) = \frac{1}{125}$ and $P(I) = \frac{1}{300}$
-
-$P(T_b \mid F) = 1/4$ because there is a $1/4$ probability that any set of *fraternal* twins is composed of two boys.
-
-$P(T_b \mid I) = 1/2$ because *identical* twins must be the same sex, meaning there is a $1/2$ chance of any set of *identical* twins being composed of two boys.
-
-Thus we have
-
-$$P(T_b) = \frac{1}{125} * \frac{1}{4} + \frac{1}{300}*\frac{1}{2} = .003667$$
-
-Plug everything in to the following equation:
-
-$$P(I \mid T_b) = \frac{P(T_b\mid I) \cdot P(I)}{P(T_b)}$$
-
-to get
-
-$$\frac{\frac{1}{2} * \frac{1}{300}}{.003667} = .454504 = 5/11$$
-
-Thus, there is a $5/11$ probability that Elvis Presley was an identical twin.
+Please see [this Jupyter Notebook](statistics/elvis-twins.ipynb) for my solution.
 
 ---
 
